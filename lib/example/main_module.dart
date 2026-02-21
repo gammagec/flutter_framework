@@ -11,7 +11,7 @@ class MainModule extends Module {
     install(ModelModule());
     install(HomeModule());
     bindLazy<App>(() => App(
-      homeComponent: di.get<ComponentRef<HomeViewModel>>(),
+      homeComponent: it.get<ComponentRef<HomeViewModel>>(),
     ));
   }
 }

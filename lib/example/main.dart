@@ -13,11 +13,11 @@ void main() async {
   final module = MainModule();
   module.setGetIt(getIt);
   module.configure();
-  final di = module.di;
+  final it = module.it;
 
-  final appModel = di.get<AppModel>();
+  final appModel = it<AppModel>();
   appModel.addFoo(FooModel(name: "john"));
   appModel.addFoo(FooModel(name: "frank"));
   appModel.addFoo(FooModel(name: "henry"));
-  runApp(di.get<App>());
+  runApp(it<App>());
 }
